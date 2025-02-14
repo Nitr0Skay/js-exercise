@@ -46,4 +46,6 @@ function changeBackgroundStyles() {
 secondButtonElement.addEventListener('click', changeBackgroundStyles);
 
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
+secondButtonElement.removeEventListener('click', changeBackgroundStyles);
+
 //    Note: You'll have to add those classes to the styles.css file first!
