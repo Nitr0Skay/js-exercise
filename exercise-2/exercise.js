@@ -32,7 +32,12 @@ const firstParagraphElement = document.body.children[2].children[1];
 const thirdParagraphElement = document.body.children[2].children[3];
 
 // 4) Change the functions from (2) such that:
+
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
+firstButtonElement.addEventListener('click', function() {
+    thirdParagraphElement.remove();
+});
+
 //    - The second button changes the background color of the first paragraph to blue
 // 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
 //    Note: You'll have to add those classes to the styles.css file first!
