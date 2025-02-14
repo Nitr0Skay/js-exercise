@@ -23,8 +23,11 @@ secondButtonElement.addEventListener('click', function(event) {
 
 // 3) Now select and store the paragraphs mentioned in the text you see on the page
 //    (first and third paragraph)
+
 //    - Select BOTH paragraphs by drilling into the document and "navigating" to the
 //      mentioned elements
+const firstParagraphElement = document.body.children[2].children[1];
+
 //    - If you struggle with DOM drilling, use "ids" instead but watch the solution!
 // 4) Change the functions from (2) such that:
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
