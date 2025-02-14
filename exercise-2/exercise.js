@@ -1,7 +1,10 @@
 // Practice what you learned!
 
 // 1) Select the two <button> elements and store them in two different variables.
+
 //    - Select the first button without adding or using any "id"
+const firstButtonElement = document.querySelector('button');
+
 //    - Select the second button by using an "id"
 // 2) Add "click" event listener to both buttons (with two different functions).
 //    The functions should "console.dir()" the clicked buttons.
