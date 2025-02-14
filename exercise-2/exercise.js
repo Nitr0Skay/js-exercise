@@ -6,6 +6,8 @@
 const firstButtonElement = document.querySelector('button');
 
 //    - Select the second button by using an "id"
+const secondButtonElement = document.querySelector('#bg-color-btn');
+
 // 2) Add "click" event listener to both buttons (with two different functions).
 //    The functions should "console.dir()" the clicked buttons.
 //    - Output the first button by using the variable in which it's stored
