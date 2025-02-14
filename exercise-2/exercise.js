@@ -34,9 +34,11 @@ const thirdParagraphElement = document.body.children[2].children[3];
 // 4) Change the functions from (2) such that:
 
 //    - The first button removes the third paragraph (i.e. the <p> prior to it)
-firstButtonElement.addEventListener('click', function() {
+function removeThirdParagraph() {
     thirdParagraphElement.remove();
-});
+}
+
+firstButtonElement.addEventListener('click', removeThirdParagraph);
 
 //    - The second button changes the background color of the first paragraph to blue
 function changeBackgroundStyles() {
@@ -49,6 +51,20 @@ secondButtonElement.addEventListener('click', changeBackgroundStyles);
 secondButtonElement.removeEventListener('click', changeBackgroundStyles);
 
 //    Note: You'll have to add those classes to the styles.css file first!
-secondButtonElement.addEventListener('click', function(event) {
+secondButtonElement.addEventListener('click', function() {
     firstParagraphElement.classList.toggle('blue-bg-color');
+});
+
+
+// Additional Task - I wanna make this first button change its behaviour to toggle - Store that paragraph in a variable, then insert it into DOM when second Event occurs
+
+firstButtonElement.removeEventListener('click', removeThirdParagraph);
+firstButtonElement.addEventListener('click', function() {
+    if(document.body.contains(thirdParagraphElement)) {
+        thirdParagraphElement.remove();
+        this.textContent = 'Revive Paragraph';
+    } else {
+        document.body.children[2].children[2].append(thirdParagraphElement);
+        this.textContent = 'Remove Paragraph';
+    }
 });
