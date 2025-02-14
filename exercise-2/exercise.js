@@ -10,7 +10,12 @@ const secondButtonElement = document.querySelector('#bg-color-btn');
 
 // 2) Add "click" event listener to both buttons (with two different functions).
 //    The functions should "console.dir()" the clicked buttons.
+
 //    - Output the first button by using the variable in which it's stored
+firstButtonElement.addEventListener('click', function() {
+    console.dir(this);  //  The keyword 'this' points to itself, therefore I would use that
+});
+
 //    - Output the second button WITHOUT using the variable in which it's stored
 // 3) Now select and store the paragraphs mentioned in the text you see on the page
 //    (first and third paragraph)
