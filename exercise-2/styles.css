@@ -39,3 +39,7 @@ button:hover {
 section p:first-of-type {
   transition: background-color 3s linear; 
 }
+
+.blue-bg-color {
+  background-color: blue;
+}
