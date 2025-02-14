@@ -35,3 +35,7 @@ button:hover {
   background-color: rgb(221, 199, 5);
   border-color: rgb(221, 199, 5);
 }
+
+section p:first-of-type {
+  transition: background-color 3s linear; 
+}
