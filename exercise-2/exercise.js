@@ -13,10 +13,14 @@ const secondButtonElement = document.querySelector('#bg-color-btn');
 
 //    - Output the first button by using the variable in which it's stored
 firstButtonElement.addEventListener('click', function() {
-    console.dir(this);  //  The keyword 'this' points to itself, therefore I would use that
+    console.dir(this);  //  The keyword 'this' points to itself, which is a variable I have to use there, therefore I would use that
 });
 
 //    - Output the second button WITHOUT using the variable in which it's stored
+secondButtonElement.addEventListener('click', function(event) {
+    console.dir(event.target);
+});
+
 // 3) Now select and store the paragraphs mentioned in the text you see on the page
 //    (first and third paragraph)
 //    - Select BOTH paragraphs by drilling into the document and "navigating" to the
