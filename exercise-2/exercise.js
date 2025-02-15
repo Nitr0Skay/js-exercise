@@ -73,3 +73,4 @@ firstButtonElement.addEventListener('click', function() {
         this.textContent = 'Remove Paragraph';
     }
 });
+
