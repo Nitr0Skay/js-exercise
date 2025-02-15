@@ -51,8 +51,13 @@ secondButtonElement.addEventListener('click', changeBackgroundStyles);
 secondButtonElement.removeEventListener('click', changeBackgroundStyles);
 
 //    Note: You'll have to add those classes to the styles.css file first!
-secondButtonElement.addEventListener('click', function() {
+secondButtonElement.addEventListener('click', function(event) {
     firstParagraphElement.classList.toggle('blue-bg-color');
+
+    if(event.target.textContent === 'Add Blue Background Color')
+        event.target.textContent = 'Remove Blue Background Color';
+    else
+        event.target.textContent = 'Add Blue Background Color';
 });
 
 
