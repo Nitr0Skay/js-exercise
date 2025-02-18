@@ -39,3 +39,26 @@ function highlightLinks() {
 }
 
 highlightLinksButtonElement.addEventListener('click', highlightLinks);
+
+// Display user data
+
+const dummyUserData = {
+    firstName: 'Max',
+    lastName: 'Shwarzmuller',
+    age: 32
+};
+
+const displayUserDataButtonElement = document.querySelector('#user-data button');
+
+function displayUserData() {
+    const outputDataElement = document.getElementById('output-user-data');
+    outputDataElement.innerHTML = '';
+    for(const key in dummyUserData) {
+        const newUserDataListItem = document.createElement('li');
+        const outputText = key.toUpperCase() + ': ' + dummyUserData[key];
+        newUserDataListItem.textContent = outputText;
+        outputDataElement.append(newUserDataListItem);
+    }
+}
+
+displayUserDataButtonElement.addEventListener('click', displayUserData);
