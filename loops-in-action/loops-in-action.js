@@ -22,12 +22,19 @@ calculateSumButtonElement.addEventListener('click', calculateSum);
 //  Highlight links
 
 const highlightLinksButtonElement = document.querySelector('#highlight-links button');
+const buttonElementText = highlightLinksButtonElement.textContent;
 
 function highlightLinks() {
     const anchorElements = document.querySelectorAll('#highlight-links a');
+    console.log(buttonElementText)
+    for(anchorElement of anchorElements) {
+        anchorElement.classList.toggle('highlight');
+    }
 
-    for(link of anchorElements) {
-        link.classList.add('highlight');
+    if(anchorElements[0].className) {
+        this.textContent = 'Disable Highlight for all links';
+    } else {
+        this.textContent = buttonElementText;
     }
 }
 
